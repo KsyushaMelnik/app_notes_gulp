@@ -1,0 +1,170 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+div,
+a,
+span,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  background: url(../img/pineapples-gcd596566b_1280.jpg) no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.container .container__notes {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.container .container__notes .note {
+  width: 250px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.container .container__notes .note .note__content {
+  margin: 35px 0;
+  padding: 10px;
+  cursor: default;
+}
+.container .container__notes .note .note__content .note__date {
+  display: flex;
+  padding: 10px 0;
+}
+.container .container__notes .note .note__content .note__date > p {
+  padding-right: 10px;
+}
+.container .container__notes .note .note__content .note__date > input {
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-style: italic;
+  cursor: pointer;
+}
+.container .container__notes .note .note__content .note__text > textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-style: italic;
+  resize: none;
+  cursor: pointer;
+}
+.container .container__notes .note .note__content .btn {
+  width: 100%;
+  text-align: right;
+  padding: 0;
+  border-radius: 10px 10px 0 0;
+}
+.container .container__notes .note .note__content .btn > span {
+  font-weight: 600;
+  padding: 10px;
+  cursor: pointer;
+}
+.container .add-btn {
+  position: fixed;
+  z-index: 100;
+  right: 50px;
+  bottom: 50px;
+  background-color: grey;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.container .container__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.container .container__modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.container .container__modal .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.container .container__modal .modal {
+  position: relative;
+  max-width: 300px;
+  margin: 50px auto;
+  background-color: #fff;
+}
+.container .container__modal .modal .modal__header {
+  padding: 15px;
+  background-color: #34A1EA;
+  font-size: 16px;
+}
+.container .container__modal .modal .modal__text {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+.container .container__modal .modal .modal__btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.container .container__modal .modal .modal__btn .btn {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #2980b9;
+  border-radius: 5px;
+}
+.container .container__modal .modal .modal__btn .btnYes {
+  width: 50px;
+}
+.container .container__modal .modal .modal__btn .btnYes:hover {
+  background-color: #AFAFAF;
+}
+.container .container__modal .modal .modal__btn .btnCancel {
+  width: 50px;
+  background-color: #34A1EA;
+}
+.container .container__modal .modal .modal__btn .btnCancel:hover {
+  background-color: #AFAFAF;
+}
